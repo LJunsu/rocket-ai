@@ -30,12 +30,19 @@ export default function Home() {
         </div>
 
         <div className="relative w-full h-[36rem] mt-16 overflow-hidden">
-          <div className="z-0 absolute left-0 bottom-0 w-[100%] h-110 char-pentagon bg-gradient-to-b from-[#D1C3AB] to-[#B19C83] blur-3xl opacity-60" />
+          <div className="z-5 absolute left-0 bottom-0 w-[100%] h-110 char-pentagon bg-gradient-to-b from-[#D1C3AB] to-[#B19C83] blur-2xl opacity-50" />
 
           <Image className="z-5 relative w-4/5 ml-auto" src="/images/캐릭터.png" alt="캐릭터" width={300} height={500} />
 
-          <div className="z-6 absolute left-1/2 -translate-x-1/2 -bottom-4 w-[120%] h-16 bg-gradient-to-b from-[#F3F2EF]/50 to-[#F3F2EF]/100 blur-sm" />
+          <div className="z-6 absolute left-1/2 -translate-x-1/2 -bottom-4 w-[120%] h-30 bg-gradient-to-b from-[#F3F2EF]/30 to-[#F3F2EF]/100 blur-sm" />
         </div>
+
+        <div className="z-10 absolute left-0 -bottom-30">
+          <Image className="" src="/images/말풍선.svg" alt="말풍선" width={300} height={500} />
+
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center">이제 본격적으로 OO님의 사주팔자를 분석해볼 차례네요.</div>
+        </div>
+
       </div>
 
       <div className="w-full h-32 bg-[#F3F2EF]">
