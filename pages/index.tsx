@@ -1,7 +1,10 @@
 import { Sajupalja } from "@/components/Sajupalja";
+import { SajupaljaMock } from "@/lib/SajupaljaMock";
 import Image from "next/image";
 
 export default function Home() {
+  const mockData = SajupaljaMock;
+
   return (
     <div className="mx-auto w-full max-w-md min-w-[320px] bg-[#F3F2EF] overflow-hidden">
       <div className="relative w-full bg-gradient-to-b from-[#5B5247] to-[#937C5F]">
@@ -45,7 +48,7 @@ export default function Home() {
           <Image src="/images/말풍선.svg" alt="말풍선" width={300} height={200} />
 
           <div className="w-2/3 absolute left-1/2 top-[calc(50%+0.8rem)] -translate-x-1/2 -translate-y-1/2 text-center">
-            이제 본격적으로<br />OO님의 사주팔자를<br />분석해볼 차례네요.
+            이제 본격적으로<br />{mockData.name}님의 사주팔자를<br />분석해볼 차례네요.
           </div>
         </div>
       </div>
@@ -60,7 +63,7 @@ export default function Home() {
           <Image className="" src="/images/말풍선2.svg" alt="말풍선2" width={300} height={150} />
 
           <div className="w-2/3 absolute left-1/2 top-[calc(50%-0.8rem)] -translate-x-1/2 -translate-y-1/2 text-center">
-            제가 oo님의 사주를<br />보기 쉽게 표로 정리했어요
+            제가 {mockData.name}님의 사주를<br />보기 쉽게 표로 정리했어요
           </div>
         </div>
 

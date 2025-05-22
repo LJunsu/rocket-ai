@@ -14,8 +14,8 @@ export const Sajupalja = () => {
 
             <div className="border-x-1 border-[#1B2F49]">
                 <div className="flex flex-col gap-3 text-center pt-8 pb-6">
-                    <span className="">김로켓님의 사주</span>
-                    <span className="text-xl font-bold">1980년 8월27일 08:10</span>
+                    <span className="">{SajupaljaMock.name}님의 사주</span>
+                    <span className="text-xl font-bold">{SajupaljaMock.birth}</span>
                 </div>
 
                 <div className="w-[100%-1.5rem] pb-8 px-3">
