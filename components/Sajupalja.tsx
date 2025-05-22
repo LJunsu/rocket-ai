@@ -19,7 +19,9 @@ export const Sajupalja = () => {
                 </div>
 
                 <div className="w-[100%-1.5rem] pb-8 px-3">
-                    <table className="table-fixed text-center w-full max-w-2xl mx-auto">
+                    <table className="
+                    table-fixed 
+                    text-center w-full max-w-2xl mx-auto">
                         <thead>
                             <tr className="text-xl">
                                 <th className="border-b border-r p-2"></th>
@@ -65,16 +67,16 @@ export const Sajupalja = () => {
 
                                 {SajupaljaMock[1].map((data, index) => (
                                     <td 
-                                        className={`border-b border-r ${SajupaljaMock[1].length !== index + 1 && "border-r-[#979796]"} border-b-[#979796] p-2`}
+                                        className={`border-b border-r ${SajupaljaMock[1].length !== index + 1 && "border-r-[#979796]"} border-b-[#979796] p-1`}
                                         key={index}
                                     >
                                         <div 
                                             style={{ backgroundColor: data[3] }} 
-                                            className={`sajuBox flex flex-col ${data[3] === "#F9F9F9" && "border-1 border-[#2F2F2F]"} ${data[3] === "#F9F9F9" ? "text-[#2F2F2F]" : "text-white"} rounded-lg m-auto *:flex *:justify-center *:items-center`}
+                                            className={`sajuBox flex flex-col justify-around ${data[3] === "#F9F9F9" && "border-1 border-[#2F2F2F]"} ${data[3] === "#F9F9F9" ? "text-[#2F2F2F]" : "text-white"} rounded-xl m-auto *:flex *:justify-center *:items-center`}
                                         >
-                                            <div className="text-[10px] h-1/3">{data[0]}</div>
-                                            <div className="text-xl font-bold h-1/3">{data[1]}</div>
-                                            <div className="text-[10px] h-1/3">{data[2]}</div>
+                                            <div className="text-[10px]">{data[0]}</div>
+                                            <div className="text-xl font-bold">{data[1]}</div>
+                                            <div className="text-[10px]">{data[2]}</div>
                                         </div>
                                     </td>
                                 ))}
@@ -88,16 +90,16 @@ export const Sajupalja = () => {
 
                                 {SajupaljaMock[2].map((data, index) => (
                                     <td 
-                                        className={`border-b border-r ${SajupaljaMock[2].length !== index + 1 && "border-r-[#979796]"} p-2`}
+                                        className={`border-b border-r ${SajupaljaMock[2].length !== index + 1 && "border-r-[#979796]"} p-1`}
                                         key={index}
                                     >
                                         <div 
                                             style={{ backgroundColor: data[3] }} 
-                                            className={`sajuBox flex flex-col ${data[3] === "#F9F9F9" && "border-1 border-[#2F2F2F]"} ${data[3] === "#F9F9F9" ? "text-[#2F2F2F]" : "text-white"} rounded-lg m-auto *:flex *:justify-center *:items-center`}
+                                            className={`sajuBox flex flex-col justify-around ${data[3] === "#F9F9F9" && "border-1 border-[#2F2F2F]"} ${data[3] === "#F9F9F9" ? "text-[#2F2F2F]" : "text-white"} rounded-xl m-auto *:flex *:justify-center *:items-center`}
                                         >
-                                            <div className="text-[10px] h-1/3">{data[0]}</div>
-                                            <div className="text-xl font-bold h-1/3">{data[1]}</div>
-                                            <div className="text-[10px] h-1/3">{data[2]}</div>
+                                            <div className="text-[10px]">{data[0]}</div>
+                                            <div className="text-xl font-bold">{data[1]}</div>
+                                            <div className="text-[10px]">{data[2]}</div>
                                         </div>
                                     </td>
                                 ))}
