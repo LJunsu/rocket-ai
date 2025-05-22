@@ -38,7 +38,7 @@ export const Sajupalja = () => {
                                 </td>
 
                                 {SajupaljaMock[0].map((data, index) => (
-                                    <td className={`border-b border-r ${SajupaljaMock[0].length !== index+1 && "border-r-[#979796]"} p-2" key={index}`}>
+                                    <td className={`border-b border-r ${SajupaljaMock[0].length !== index+1 && "border-r-[#979796]"} p-2"`} key={index}>
                                         {Array.isArray(data[0]) ? (
                                             data.map((item, idx) => (
                                                 <div className="my-4" key={idx}>
@@ -66,6 +66,7 @@ export const Sajupalja = () => {
                                 {SajupaljaMock[1].map((data, index) => (
                                     <td 
                                         className={`border-b border-r ${SajupaljaMock[1].length !== index + 1 && "border-r-[#979796]"} border-b-[#979796] p-2`}
+                                        key={index}
                                     >
                                         <div 
                                             style={{ backgroundColor: data[3] }} 
@@ -88,6 +89,7 @@ export const Sajupalja = () => {
                                 {SajupaljaMock[2].map((data, index) => (
                                     <td 
                                         className={`border-b border-r ${SajupaljaMock[2].length !== index + 1 && "border-r-[#979796]"} p-2`}
+                                        key={index}
                                     >
                                         <div 
                                             style={{ backgroundColor: data[3] }} 
