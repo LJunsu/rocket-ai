@@ -1,4 +1,5 @@
 import { Sajupalja } from "@/components/Sajupalja";
+import { SajupaljaMock } from "@/lib/SajupaljaMock";
 import Image from "next/image";
 
 export default function Home() {

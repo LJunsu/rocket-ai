@@ -19,7 +19,7 @@ export const Sajupalja = () => {
                 </div>
 
                 <div className="w-[100%-1.5rem] pb-8 px-3">
-                    <table className="table-fixed text-center text-sm w-full max-w-2xl mx-auto">
+                    <table className="table-fixed text-center w-full max-w-2xl mx-auto">
                         <thead>
                             <tr className="text-xl">
                                 <th className="border p-2"></th>
@@ -32,29 +32,40 @@ export const Sajupalja = () => {
                         
                         <tbody>
                             <tr className="text-center bg-white">
-                                <td className="border p-2 font-bold bg-[#F5F3EC]">
-                                    <div className="font-bold">十星</div>
-                                    <div className="text-xs">(십성)</div>
+                                <td className="border p-2 bg-[#F5F3EC]">
+                                    <div className="text-sm font-bold">十星</div>
+                                    <div className="text-[10px]">(십성)</div>
                                 </td>
 
-                                {SajupaljaMock[0].map((data) => (
-                                    <td className="border p-2">
-                                        <div className="font-bold">{data[0]}</div>
-                                        <div className="text-xs">{data[1]}</div>
+                                {SajupaljaMock[0].map((data, index) => (
+                                    <td className="border p-2" key={index}>
+                                        {Array.isArray(data[0]) ? (
+                                            data.map((item, idx) => (
+                                                <div className="my-4" key={idx}>
+                                                    <div className="font-bold">{item[0]}</div>
+                                                    <div className="text-[10px]">{item[1]}</div>
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <>
+                                                <div className="font-bold">{data[0]}</div>
+                                                <div className="text-[10px]">{data[1] ? data[1] : "(없음)"}</div>
+                                            </>
+                                        )}
                                     </td>
                                 ))}
 
                             </tr>
 
                             <tr className="text-center bg-white">
-                                <td className="border p-2 font-bold bg-[#F5F3EC]">
-                                    <div className="font-bold">天干</div>
+                                <td className="border p-2 bg-[#F5F3EC]">
+                                    <div className="text-sm font-bold">天干</div>
                                     <div className="text-xs">(천간)</div>
                                 </td>
 
                                 {SajupaljaMock[1].map((data) => (
                                     <td className="border p-2">
-                                        <div className="flex flex-col size-13 bg-[#2F2F2F] rounded-lg m-auto text-white *:flex *:justify-center *:items-center">
+                                        <div className={`flex flex-col size-13 bg-[${data[3]}] ${data[3] === "#F9F9F9" && "border-1 border-[#2F2F2F]"} ${data[3] === "#F9F9F9" ? "text-[#2F2F2F]" : "text-white"} rounded-lg m-auto *:flex *:justify-center *:items-center`}>
                                             <div className="text-[8px] h-1/3">{data[0]}</div>
                                             <div className="text-xl h-1/3">{data[1]}</div>
                                             <div className="text-[8px] h-1/3">{data[2]}</div>
@@ -64,14 +75,14 @@ export const Sajupalja = () => {
                             </tr>
 
                             <tr className="text-center bg-white">
-                                <td className="border p-2 font-bold bg-[#F5F3EC]">
-                                    <div className="font-bold">地支</div>
+                                <td className="border p-2 bg-[#F5F3EC]">
+                                    <div className="text-sm font-bold">地支</div>
                                     <div className="text-xs">(지지)</div>
                                 </td>
 
                                 {SajupaljaMock[2].map((data) => (
                                     <td className="border p-2">
-                                        <div className="flex flex-col size-13 bg-[#2F2F2F] rounded-lg m-auto text-white *:flex *:justify-center *:items-center">
+                                        <div className={`flex flex-col size-13 bg-[${data[3]}] ${data[3] === "#F9F9F9" && "border-1 border-[#2F2F2F]"} ${data[3] === "#F9F9F9" ? "text-[#2F2F2F]" : "text-white"} rounded-lg m-auto *:flex *:justify-center *:items-center`}>
                                             <div className="text-[8px] h-1/3">{data[0]}</div>
                                             <div className="text-xl h-1/3">{data[1]}</div>
                                             <div className="text-[8px] h-1/3">{data[2]}</div>
@@ -81,57 +92,101 @@ export const Sajupalja = () => {
                             </tr>
 
                             <tr className="text-center bg-white">
-                                <td className="border p-2 font-bold bg-[#F5F3EC]">
-                                    <div className="font-bold">十星</div>
+                                <td className="border p-2 bg-[#F5F3EC]">
+                                    <div className="text-sm font-bold">十星</div>
                                     <div className="text-xs">(십성)</div>
                                 </td>
 
-                                {SajupaljaMock[3].map((data) => (
-                                    <td className="border p-2">
-                                        <div className="font-bold">{data[0]}</div>
-                                        <div className="text-xs">{data[1]}</div>
+                                {SajupaljaMock[3].map((data, index) => (
+                                    <td className="border p-2" key={index}>
+                                        {Array.isArray(data[0]) ? (
+                                            data.map((item, idx) => (
+                                                <div className="my-4" key={idx}>
+                                                    <div className="font-bold">{item[0]}</div>
+                                                    <div className="text-[10px]">{item[1]}</div>
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <>
+                                                <div className="font-bold">{data[0]}</div>
+                                                <div className="text-[10px]">{data[1] ? data[1] : "(없음)"}</div>
+                                            </>
+                                        )}
                                     </td>
                                 ))}
                             </tr>
 
                             <tr className="text-center bg-white">
-                                <td className="border p-2 font-bold bg-[#F5F3EC]">
-                                    <div className="font-bold">十二運星</div>
+                                <td className="border p-2 bg-[#F5F3EC]">
+                                    <div className="text-sm font-bold">十二運星</div>
                                     <div className="text-xs">(십이운성)</div>
                                 </td>
 
-                                {SajupaljaMock[4].map((data) => (
-                                    <td className="border p-2">
-                                        <div className="font-bold">{data[0]}</div>
-                                        <div className="text-xs">{data[1]}</div>
+                                {SajupaljaMock[4].map((data, index) => (
+                                    <td className="border p-2" key={index}>
+                                        {Array.isArray(data[0]) ? (
+                                            data.map((item, idx) => (
+                                                <div className="my-4" key={idx}>
+                                                    <div className="font-bold">{item[0]}</div>
+                                                    <div className="text-[10px]">{item[1]}</div>
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <>
+                                                <div className="font-bold">{data[0]}</div>
+                                                <div className="text-[10px]">{data[1] ? data[1] : "(없음)"}</div>
+                                            </>
+                                        )}
                                     </td>
                                 ))}
                             </tr>
 
                             <tr className="text-center bg-white">
-                                <td className="border p-2 font-bold bg-[#F5F3EC]">
-                                    <div className="font-bold">十二神殺</div>
+                                <td className="border p-2 bg-[#F5F3EC]">
+                                    <div className="text-sm font-bold">十二神殺</div>
                                     <div className="text-xs">(십이신살)</div>
                                 </td>
 
-                                {SajupaljaMock[5].map((data) => (
-                                    <td className="border p-2">
-                                        <div className="font-bold">{data[0]}</div>
-                                        <div className="text-xs">{data[1]}</div>
+                                {SajupaljaMock[5].map((data, index) => (
+                                    <td className="border p-2" key={index}>
+                                        {Array.isArray(data[0]) ? (
+                                            data.map((item, idx) => (
+                                                <div className="my-4" key={idx}>
+                                                    <div className="font-bold">{item[0]}</div>
+                                                    <div className="text-[10px]">{item[1]}</div>
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <>
+                                                <div className="font-bold">{data[0]}</div>
+                                                <div className="text-[10px]">{data[1] ? data[1] : "(없음)"}</div>
+                                            </>
+                                        )}
                                     </td>
                                 ))}
                             </tr>
 
                             <tr className="text-center bg-white">
-                                <td className="border p-2 font-bold bg-[#F5F3EC]">
-                                    <div className="font-bold">貴人</div>
+                                <td className="border p-2 bg-[#F5F3EC]">
+                                    <div className="text-sm font-bold">貴人</div>
                                     <div className="text-xs">(귀인)</div>
                                 </td>
 
-                                {SajupaljaMock[6].map((data) => (
-                                    <td className="border p-2">
-                                        <div className="font-bold">{data[0]}</div>
-                                        <div className="text-xs">{data[1] ? data[1]: "(없음)"}</div>
+                                {SajupaljaMock[6].map((data, index) => (
+                                    <td className="border p-2" key={index}>
+                                        {Array.isArray(data[0]) ? (
+                                            data.map((item, idx) => (
+                                                <div className="my-4" key={idx}>
+                                                    <div className="font-bold">{item[0]}</div>
+                                                    <div className="text-[10px]">{item[1]}</div>
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <>
+                                                <div className="font-bold">{data[0]}</div>
+                                                <div className="text-[10px]">{data[1] ? data[1] : "(없음)"}</div>
+                                            </>
+                                        )}
                                     </td>
                                 ))}
                             </tr>
